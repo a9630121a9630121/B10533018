@@ -1,0 +1,24 @@
+<h1>龍之的自我介紹</h1>
+<table class="table">
+	<tr>
+		<th>暱名</th>
+	</tr>
+	{% for i in intro %}
+	<tr>
+		<th>{{i.name}}</th>
+	</tr>
+	{% endfor %}
+</table>
+<hr>
+<table class="table">
+	<tr>
+		<th>興趣</th>
+		<th>喜歡吃的</th>
+	</tr>
+	{% for i in intro %}
+	<tr>
+		<th>{{i.hobby}}</th>
+		<th>{{i.food}}</th>
+	</tr>
+	{% endfor %}
+</table>
