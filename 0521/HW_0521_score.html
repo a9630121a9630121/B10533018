@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+SCORE:<input type="number" id="n1" value="0"/>
+<button onclick="isFail()">click</button>
+
+<p id="demo">here</p>
+
+<script type="text/javascript">
+	
+function isFail(){
+  var x=parseInt(document.getElementById("n1").value);
+  if(x>=60){
+       document.getElementById("demo").innerHTML ="OK";
+     }else if(x<60){
+     document.getElementById("demo").innerHTML ="Failed";
+     }
+}
+</script>
+
+</body>
+
+</html>
+

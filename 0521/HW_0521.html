@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="number" id="n1" value="0"/>
+<input type="number" id="n2" value="0"/>
+
+<button onclick="ADD()">+</button>
+<button onclick="SUB()">-</button>
+<button onclick="MULT()">*</button>
+<button onclick="DIVI()">/</button>
+<button onclick="CLEAR()">C</button>
+
+<script type="text/javascript">
+	
+	var x,y;
+var z=0;
+
+function ADD(){
+  x=document.getElementById("n1").value;
+  y=document.getElementById("n2").value;
+	document.getElementById("demo").innerHTML =parseInt(x)+parseInt(y);
+}
+function SUB(){
+	x=document.getElementById("n1").value;
+  y=document.getElementById("n2").value;
+	document.getElementById("demo").innerHTML =parseInt(x)-parseInt(y);
+}
+function MULT(){
+	x=document.getElementById("n1").value;
+  y=document.getElementById("n2").value;
+	document.getElementById("demo").innerHTML =parseInt(x)*parseInt(y);
+}
+function DIVI(){
+	x=document.getElementById("n1").value;
+  y=document.getElementById("n2").value;
+	document.getElementById("demo").innerHTML =parseInt(x)/parseInt(y);
+}
+
+function CLEAR(){
+	document.getElementById("n1").value=0;
+  document.getElementById("n2").value=0;
+  document.getElementById("demo").innerHTML ="Answer will be shown here";
+}
+
+</script>
+  
+<h3>Result</h3>
+<p id="demo">Answer will be shown here</p>
+  
+</body>
+</html>
