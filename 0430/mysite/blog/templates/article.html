@@ -1,0 +1,48 @@
+
+<html>
+<style type="text/css">
+
+.divv{
+	padding: 50px;
+	margin: 50px;
+    width: 80%;
+    background-color: white;
+}
+
+.container{
+	padding: 50px;
+	margin: 50px;
+    width: 80%;
+}
+
+
+body{
+	background-color: black;
+}
+
+</style>
+
+<body>
+	<div class="container">
+		<h1 style="color:white">B10533018's Blog</h1>
+		<p style="color:white">Write something here.</p>
+		<a href="/blog/create"><button>New Post</button></a>
+		
+		{% for a in article %}
+		<div class="divv">
+			<h4>TITLE:</h4>{{ a.title }}
+			<h4>TEXT:</h4>{{ a.text }}
+			<br><br>
+			<a href="/blog/edit?q={{ a.pk }}"><button>edit</button></a>
+
+			<form action="" method="post">
+				{% csrf_token %}
+				<input type="hidden" name="pk" id="pk" value="{{ a.pk }}">
+				<input type="submit" value="delete">
+			</form>
+		</div>
+		{% endfor %}
+	</div>
+</body>
+
+</html>
